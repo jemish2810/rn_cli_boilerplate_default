@@ -1,0 +1,69 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "assets/fonts/CourierPrime-Bold.ttf",
+      "sha1": "ea491d42faae0061c4f04ea514874643ed128f05"
+    },
+    {
+      "path": "assets/fonts/CourierPrime-BoldItalic.ttf",
+      "sha1": "774537c23f1e4b86998b7dceb4477b169b7e178c"
+    },
+    {
+      "path": "assets/fonts/CourierPrime-Italic.ttf",
+      "sha1": "b2db781fbf2d2414ec13013a02e623725dcd935f"
+    },
+    {
+      "path": "assets/fonts/CourierPrime-Regular.ttf",
+      "sha1": "f0e110c73ff02b2fc7f60bd96697c42ee9730ae2"
+    },
+    {
+      "path": "assets/fonts/HelveticaNeueLight.otf",
+      "sha1": "6013aa8c5fb912f30e935a310c5fa203317d00d8"
+    },
+    {
+      "path": "assets/fonts/HelveticaNeueMedium.otf",
+      "sha1": "d46c2de0310e80f35934124d36a5556f08948700"
+    },
+    {
+      "path": "assets/fonts/HelveticaNeueThin.otf",
+      "sha1": "623d2934160c3816be359f0cfb443deab769935f"
+    },
+    {
+      "path": "assets/fonts/Monospace.ttf",
+      "sha1": "6155407cd09df21865135cf4374b6fd3cc23e4d9"
+    },
+    {
+      "path": "assets/fonts/MonospaceBold.ttf",
+      "sha1": "e270572edf4d15236e23c0a386c36adab132a5fa"
+    },
+    {
+      "path": "assets/fonts/MonospaceOblique.ttf",
+      "sha1": "dbb688e2a399f0ac533cb0955b6b6e61689a4b00"
+    },
+    {
+      "path": "assets/fonts/SpaceGrotesk-Bold.ttf",
+      "sha1": "b2aa14fa837cf3ed5e647c87906e88238d88c548"
+    },
+    {
+      "path": "assets/fonts/SpaceGrotesk-Light.ttf",
+      "sha1": "37a7dffc1d580f94f9204b8a90f6c60bed9f500e"
+    },
+    {
+      "path": "assets/fonts/SpaceGrotesk-Medium.ttf",
+      "sha1": "53a82dc42149eb575e8e38dcd0c618899e7e8b8f"
+    },
+    {
+      "path": "assets/fonts/SpaceGrotesk-Regular.ttf",
+      "sha1": "d1666e3605d713802650ab26c0914238ca124274"
+    },
+    {
+      "path": "assets/fonts/SpaceGrotesk-SemiBold.ttf",
+      "sha1": "0f5ec8c385c42b65cd8bcb494f26e9c282d6a107"
+    },
+    {
+      "path": "assets/fonts/SpaceGrotesk-VariableFont_wght.ttf",
+      "sha1": "56ad34114fcf1c1bdf3316139ef36482416c81e6"
+    }
+  ]
+}
