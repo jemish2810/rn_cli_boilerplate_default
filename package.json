@@ -18,7 +18,10 @@
     "postinstall": "patch-package",
     "bundle:visualize": "npx react-native-bundle-visualizer",
     "bundle:visualize:dev": "npx react-native-bundle-visualizer --dev",
-    "reset:metro": "react-native start --reset-cache"
+    "reset:metro": "react-native start --reset-cache",
+    "gc": "cd android && ./gradlew clean",
+    "release:android": "yarn gc && cd android && ./gradlew assemblerelease && cd .."
+
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "1.23.1",

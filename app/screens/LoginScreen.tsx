@@ -3,8 +3,8 @@ import React, { ComponentType, FC, useEffect, useMemo, useRef, useState } from "
 import { TextInput, TextStyle, ViewStyle } from "react-native"
 import { Button, Icon, Screen, Text, TextField, TextFieldAccessoryProps } from "../components"
 import { useStores } from "../models"
-import { AppStackScreenProps } from "../navigators"
 import { colors, spacing } from "../theme"
+import { AppStackScreenProps } from "app/navigators/AppNavigator"
 
 interface LoginScreenProps extends AppStackScreenProps<"Login"> {}
 

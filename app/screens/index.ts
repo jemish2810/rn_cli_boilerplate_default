@@ -1,4 +1,4 @@
-export * from "./WelcomeScreen"
+export * from "./Welcome"
 export * from "./AboutScreen"
 export * from "./LoginScreen"
 export * from "./DemoDebugScreen"

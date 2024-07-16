@@ -159,7 +159,7 @@ export function Screen(props: ScreenProps) {
     keyboardOffset = 0,
     safeAreaEdges,
     StatusBarProps,
-    statusBarStyle = "dark-content", // Use "dark-content" for light text, "light-content" for dark text
+    statusBarStyle = "dark-content",
   } = props
 
   const $containerInsets = useSafeAreaInsetsStyle(safeAreaEdges)
@@ -206,5 +206,5 @@ const $outerStyle: ViewStyle = {
 
 const $innerStyle: ViewStyle = {
   justifyContent: "flex-start",
-  alignItems: "stretch",
+  // alignItems: "stretch",
 }

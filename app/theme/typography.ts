@@ -1,12 +1,12 @@
 import { Platform } from "react-native"
 
 const fonts = {
-  spaceGrotesk: {
-    light: "SpaceGrotesk-Light",
-    normal: "SpaceGrotesk-Regular",
-    medium: "SpaceGrotesk-Medium",
-    semiBold: "SpaceGrotesk-SemiBold",
-    bold: "SpaceGrotesk-Bold",
+  poppins: {
+    light: "Poppins-Light",
+    normal: "Poppins-Regular",
+    medium: "Poppins-Medium",
+    semiBold: "Poppins-SemiBold",
+    bold: "Poppins-Bold",
   },
   helveticaNeue: {
     thin: "HelveticaNeueThin",
@@ -40,7 +40,7 @@ export const typography = {
   /**
    * The primary font. Used in most places.
    */
-  primary: fonts.spaceGrotesk,
+  primary: fonts.poppins,
   /**
    * An alternate font used for perhaps titles and stuff.
    */

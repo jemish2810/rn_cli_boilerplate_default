@@ -8,7 +8,7 @@ import { translate } from "../i18n"
 import { DemoDebugScreen } from "../screens"
 import { DemoPodcastListScreen } from "../screens/DemoPodcastListScreen"
 import { colors, spacing, typography } from "../theme"
-import { AppStackParamList, AppStackScreenProps } from "./AppNavigator"
+import { AppStackParamList, AppStackScreenProps } from "./RootNavigator"
 import { Tab2Screen } from "app/screens/Tab2Screen"
 
 export type DemoTabParamList = {

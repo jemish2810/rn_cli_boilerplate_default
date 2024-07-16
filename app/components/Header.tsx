@@ -233,6 +233,26 @@ function HeaderAction(props: HeaderActionProps) {
 
   if (ActionComponent) return ActionComponent
 
+  if (content && icon) {
+    return (
+      <TouchableOpacity
+        style={[$actionTextContainer, $actionTextWithIconContainer, { backgroundColor }]}
+        onPress={onPress}
+        disabled={!onPress}
+        activeOpacity={0.8}
+      >
+        <Icon
+          size={16}
+          icon={icon}
+          color={iconColor}
+          onPress={onPress}
+          containerStyle={[{ backgroundColor }]}
+          style={isRTL ? { transform: [{ rotate: "180deg" }] } : {}}
+        />
+        <Text preset="subhead_lg" text={content} style={$actionText} />
+      </TouchableOpacity>
+    )
+  }
   if (content) {
     return (
       <TouchableOpacity
@@ -267,6 +287,7 @@ const $wrapper: ViewStyle = {
   flexDirection: "row",
   alignItems: "center",
   justifyContent: "space-between",
+  backgroundColor: "#ffff",
 }
 
 const $container: ViewStyle = {
@@ -288,6 +309,12 @@ const $actionTextContainer: ViewStyle = {
 
 const $actionText: TextStyle = {
   color: colors.tint,
+}
+
+const $actionTextWithIconContainer: ViewStyle = {
+  flexDirection: "row",
+  paddingHorizontal: spacing.xs,
+  gap: 10,
 }
 
 const $actionIconContainer: ViewStyle = {

@@ -1,5 +1,5 @@
 /**
- * The app navigator (formerly "AppNavigator" and "MainNavigator") is used for the primary
+ * The app navigator (formerly "RootNavigator" and "MainNavigator") is used for the primary
  * navigation flows of your app.
  * Generally speaking, it will contain an auth flow (registration, login, forgot password)
  * and a "main" flow which the user will use once logged in.
@@ -7,14 +7,15 @@
 import { DarkTheme, DefaultTheme, NavigationContainer } from "@react-navigation/native"
 import { createNativeStackNavigator, NativeStackScreenProps } from "@react-navigation/native-stack"
 import { observer } from "mobx-react-lite"
-import React from "react"
+import React, { useState } from "react"
 import { useColorScheme } from "react-native"
-import * as Screens from "app/screens"
 import Config from "../config"
-import { useStores } from "../models"
 import { navigationRef, useBackButtonHandler } from "./navigationUtilities"
-import { colors } from "app/theme"
-import DrawerNavigator from "./DrawerNavigator"
+import { GENERAL_SCREENS } from "./utils/routes.enum"
+import { MainStackScreen } from "./stack/MainStack"
+import { RootStackParamList } from "./navigators.types"
+import ForceUpdateScreen from "app/screens/ForceUpdateScreen"
+import NoInternetScreen from "app/screens/NoInternetScreen"
 
 /**
  * This type allows TypeScript to know what routes are defined in this navigator
@@ -30,34 +31,27 @@ import DrawerNavigator from "./DrawerNavigator"
  *   https://reactnavigation.org/docs/typescript/#organizing-types
  */
 
-export type AppStackParamList = {
-  Welcome: undefined
-  Login: undefined
-  Drawer: undefined
-}
-
 /**
  * This is a list of all the route names that will exit the app if the back button
  * is pressed while in that screen. Only affects Android.
  */
 const exitRoutes = Config.exitRoutes
 
-export type AppStackScreenProps<T extends keyof AppStackParamList> = NativeStackScreenProps<
-  AppStackParamList,
+export type AppStackScreenProps<T extends keyof RootStackParamList> = NativeStackScreenProps<
+  RootStackParamList,
   T
 >
-
-const Stack = createNativeStackNavigator<AppStackParamList>()
 
 export interface NavigationProps
   extends Partial<React.ComponentProps<typeof NavigationContainer>> {}
 
-export const AppNavigator = observer(function AppNavigator(props: NavigationProps) {
-  const {
-    authenticationStore: { isAuthenticated },
-  } = useStores()
+export const RootNavigator = observer(function RootNavigator(props: NavigationProps) {
+  const RootStack = createNativeStackNavigator<RootStackParamList>()
+
   const colorScheme = useColorScheme()
   useBackButtonHandler((routeName) => exitRoutes.includes(routeName))
+  const shouldAppForceUpdate = false
+  const [_isInternetConnected, _setIsInternetConnected] = useState<boolean | null>(true)
 
   return (
     <NavigationContainer
@@ -65,21 +59,19 @@ export const AppNavigator = observer(function AppNavigator(props: NavigationProp
       theme={colorScheme === "dark" ? DarkTheme : DefaultTheme}
       {...props}
     >
-      <Stack.Navigator
-        screenOptions={{ headerShown: false, navigationBarColor: colors.background }}
-        initialRouteName={isAuthenticated ? "Welcome" : "Login"}
-      >
-        {isAuthenticated ? (
-          <>
-            <Stack.Screen name="Welcome" component={Screens.WelcomeScreen} />
-            <Stack.Screen name="Drawer" component={DrawerNavigator} />
-          </>
-        ) : (
-          <>
-            <Stack.Screen name="Login" component={Screens.LoginScreen} />
-          </>
-        )}
-      </Stack.Navigator>
+      <RootStack.Navigator>
+        {shouldAppForceUpdate && <ForceUpdateScreen />}
+
+        {!_isInternetConnected && <NoInternetScreen />}
+
+        <RootStack.Screen
+          name={GENERAL_SCREENS.MAIN}
+          component={MainStackScreen}
+          options={{
+            headerShown: false,
+          }}
+        />
+      </RootStack.Navigator>
     </NavigationContainer>
   )
 })
