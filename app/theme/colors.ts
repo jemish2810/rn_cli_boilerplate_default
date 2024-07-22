@@ -142,4 +142,5 @@ export const colors = {
    */
   errorBackground: palette.angry100,
   primary: palette.primary,
+  disable: palette.contentDisabled,
 }

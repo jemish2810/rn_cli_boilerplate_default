@@ -43,6 +43,6 @@ export const WelcomeScreen: FC<WelcomeBoardScreenProps> = ({ navigation }) => {
 
 const $screenContentContainer: ViewStyle = {
   paddingVertical: spacing.md,
-  paddingHorizontal: spacing.lg,
+  paddingHorizontal: spacing.md,
   flex: 1,
 }

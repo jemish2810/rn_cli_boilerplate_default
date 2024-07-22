@@ -8,7 +8,7 @@ import {
   ViewStyle,
 } from "react-native"
 import { isRTL, translate } from "../i18n"
-import { colors, spacing } from "../theme"
+import { colors, SCREEN_HEIGHT, spacing } from "../theme"
 import { ExtendedEdge, useSafeAreaInsetsStyle } from "../utils/useSafeAreaInsetsStyle"
 import { Icon, IconTypes } from "./Icon"
 import { Text, TextProps } from "./Text"
@@ -242,7 +242,7 @@ function HeaderAction(props: HeaderActionProps) {
         activeOpacity={0.8}
       >
         <Icon
-          size={16}
+          size={SCREEN_HEIGHT * 0.02}
           icon={icon}
           color={iconColor}
           onPress={onPress}
@@ -303,7 +303,7 @@ const $actionTextContainer: ViewStyle = {
   alignItems: "center",
   justifyContent: "center",
   height: "100%",
-  paddingHorizontal: spacing.md,
+  // paddingHorizontal: spacing.md,
   zIndex: 2,
 }
 
@@ -313,8 +313,8 @@ const $actionText: TextStyle = {
 
 const $actionTextWithIconContainer: ViewStyle = {
   flexDirection: "row",
-  paddingHorizontal: spacing.xs,
-  gap: 10,
+  // paddingHorizontal: spacing.xs,
+  gap: 5,
 }
 
 const $actionIconContainer: ViewStyle = {
