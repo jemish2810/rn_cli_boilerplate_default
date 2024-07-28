@@ -13,6 +13,7 @@ export enum PUBLIC_SCREENS {
   WELCOME_BOARD = "WelcomeBoardScreen",
   SIGN_IN = "SignInScreen",
   SIGN_UP = "SignUpScreen",
+  FORGOT_PASSWORD = "ForgotPasswordScreen",
 }
 
 // Application With Authentication Screens

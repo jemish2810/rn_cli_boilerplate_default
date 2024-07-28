@@ -11,10 +11,11 @@ export const styles = StyleSheet.create({
     paddingHorizontal: 12,
     marginBottom: 12,
   },
-  termsContainer: {
+  forgotPwdContainer: {
     flexDirection: "row",
     flexWrap: "wrap",
     alignItems: "center",
+    justifyContent: "flex-end"
   },
   orContainer: {
     flexDirection: "row",
@@ -44,24 +45,5 @@ export const styles = StyleSheet.create({
   signInContainer: {
     flexDirection: "row",
     justifyContent: "center",
-  },
-})
-
-export const pickerSelectStyles = StyleSheet.create({
-  inputIOS: {
-    height: 50,
-    borderColor: "#CCCCCC",
-    borderWidth: 1,
-    borderRadius: 8,
-    paddingHorizontal: 12,
-    marginBottom: 12,
-  },
-  inputAndroid: {
-    height: 50,
-    borderColor: "#CCCCCC",
-    borderWidth: 1,
-    borderRadius: 8,
-    paddingHorizontal: 12,
-    marginBottom: 12,
   },
 })

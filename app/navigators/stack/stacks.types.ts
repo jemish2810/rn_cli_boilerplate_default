@@ -6,4 +6,5 @@ export type MainStackParamList = {
   [PUBLIC_SCREENS.WELCOME_BOARD]: undefined
   [PUBLIC_SCREENS.SIGN_IN]: undefined
   [PUBLIC_SCREENS.SIGN_UP]: undefined
+  [PUBLIC_SCREENS.FORGOT_PASSWORD]: undefined
 }

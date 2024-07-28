@@ -7,6 +7,7 @@ import OnBoardingScreen from "app/screens/Onboardings/index"
 import { WelcomeScreen } from "app/screens"
 import SignInScreen from "app/screens/Auth/SignIn"
 import SignUpScreen from "app/screens/Auth/SignUp"
+import ForgotPasswordScreen from "app/screens/Auth/ForgotPassword"
 
 const MainStack = createNativeStackNavigator<MainStackParamList>()
 
@@ -36,6 +37,7 @@ export const MainStackScreen: React.FC = () => {
         <MainStack.Screen name={PUBLIC_SCREENS.WELCOME_BOARD} component={WelcomeScreen} />
         <MainStack.Screen name={PUBLIC_SCREENS.SIGN_UP} component={SignUpScreen} />
         <MainStack.Screen name={PUBLIC_SCREENS.SIGN_IN} component={SignInScreen} />
+        <MainStack.Screen name={PUBLIC_SCREENS.FORGOT_PASSWORD} component={ForgotPasswordScreen} />
       </MainStack.Group>
 
       <MainStack.Screen
